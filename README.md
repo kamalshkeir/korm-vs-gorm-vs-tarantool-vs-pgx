@@ -25,7 +25,7 @@ go test -bench=Pgx -benchmem .
 ## pgx 5.2.0
 ## go-tarantool 1.10.0
 
-## GetAll
+## GetAll, it took korm 0,0006208 Milliseconde to get 1000 rows
 BenchmarkGetAllS_Taran_Raw-4                 525           2112783 ns/op          936663 B/op       5736 allocs/op
 BenchmarkGetAllS_Taran_ORM-4                1579            721029 ns/op          233939 B/op       4714 allocs/op
 BenchmarkGetAllS_Postgres_Korm-4         1570945               732.8 ns/op           240 B/op          3 allocs/op <-- fastest
