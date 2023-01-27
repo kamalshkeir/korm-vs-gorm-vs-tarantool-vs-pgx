@@ -32,11 +32,21 @@ BenchmarkGetAllS_Postgres_Korm-4         1570945               732.8 ns/op      
 BenchmarkGetAllS_Postgres_Gorm-4             729           2052911 ns/op          221538 B/op       7809 allocs/op
 BenchmarkGetAllS_Postgres_Pgx-4             1573            779752 ns/op           59560 B/op       2968 allocs/op
 
+BenchmarkGetAllM_Taran_Raw-4                 591           2196701 ns/op         1248630 B/op       6734 allocs/op
+BenchmarkGetAllM_Postgres_Korm-4         2057124               620.8 ns/op            32 B/op          2 allocs/op <-- fastest
+BenchmarkGetAllM_Postgres_Gorm-4             864           1405830 ns/op          122853 B/op       3237 allocs/op
+BenchmarkGetAllM_Postgres_Pgx-4             Not Implemented yet
+
 ## GetRow second iteration, first one doesn't make sense, because it only save to cache and never fetched
 BenchmarkGetRowS_Taran_ORM2-4              37310             34005 ns/op            1115 B/op         27 allocs/op
 BenchmarkGetRowS_Postgres_Korm2-4         850898             28326 ns/op             491 B/op         13 allocs/op <-- fastest
 BenchmarkGetRowS_Postgres_Gorm-4            1321            766825 ns/op           16393 B/op        150 allocs/op
 BenchmarkGetRowS_Postgres_Pgx-4             3710            277754 ns/op             785 B/op         18 allocs/op
+
+BenchmarkGetRowM_Taran_Raw2-4              22039             63759 ns/op            2584 B/op         59 allocs/op
+BenchmarkGetRowM_Postgres_Korm2-4         870886            192768 ns/op            1215 B/op         30 allocs/op <-- fastest
+BenchmarkGetRowM_Postgres_Gorm-4            1638            645881 ns/op           16324 B/op        156 allocs/op
+BenchmarkGetRowM_Postgres_Pgx-4             Not Implemented yet
 
 ## INSERT
 BenchmarkInsertS_Taran_ORM-4              100000            567109 ns/op            1078 B/op         26 allocs/op
